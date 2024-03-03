@@ -12,10 +12,9 @@ closing_prices = {symbol: data['Close'] for symbol, data in stock_data.items()}
 
 daily_returns = {symbol: np.log(prices / prices.shift(1)) for symbol, prices in closing_prices.items()}
 
-# Calculate cumulative returns using NumPy for each stock
 cumulative_returns = {symbol: np.exp(np.cumsum(returns)) - 1 for symbol, returns in daily_returns.items()}
 
-# Plotting the stock prices and cumulative returns for each stock
+
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8))
 
 for symbol, prices in closing_prices.items():
