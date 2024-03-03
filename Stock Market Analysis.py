@@ -9,7 +9,7 @@ stock_data = {symbol: yf.download(symbol, start='2020-01-01', end='2022-01-01') 
 
 closing_prices = {symbol: data['Close'] for symbol, data in stock_data.items()}
 
-# Calculate daily returns using NumPy for each stock
+
 daily_returns = {symbol: np.log(prices / prices.shift(1)) for symbol, prices in closing_prices.items()}
 
 # Calculate cumulative returns using NumPy for each stock
