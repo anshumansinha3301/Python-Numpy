@@ -2,7 +2,6 @@ import yfinance as yf
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define stock symbols and corresponding prices
 stocks_info = {'AAPL': 150, 'TATA': 100, 'SSNLF': 326}
 
 # Fetch historical stock data using yfinance for each stock
