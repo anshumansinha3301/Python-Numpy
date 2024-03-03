@@ -6,7 +6,7 @@ stocks_info = {'AAPL': 150, 'TATA': 100, 'SSNLF': 326}
 
 stock_data = {symbol: yf.download(symbol, start='2020-01-01', end='2022-01-01') for symbol in stocks_info.keys()}
 
-# Extract closing prices from the stock data for each stock
+
 closing_prices = {symbol: data['Close'] for symbol, data in stock_data.items()}
 
 # Calculate daily returns using NumPy for each stock
