@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 stocks_info = {'AAPL': 150, 'TATA': 100, 'SSNLF': 326}
 
-# Fetch historical stock data using yfinance for each stock
 stock_data = {symbol: yf.download(symbol, start='2020-01-01', end='2022-01-01') for symbol in stocks_info.keys()}
 
 # Extract closing prices from the stock data for each stock
